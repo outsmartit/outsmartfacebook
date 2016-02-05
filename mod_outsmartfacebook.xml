@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>mod_outsmartfacebook</name>
+    <author>Bul-it bvba</author>
+    <creationDate>February 2016</creationDate>
+    <copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@outsmartit.be</authorEmail>
+    <authorUrl>www.outsmartit.be</authorUrl>
+    <version>1.0</version>
+    <description>MOD_OUTSMARTFACEBOOK_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_outsmartfacebook">mod_outsmartfacebook.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <filename>mod_outsmartfacebook.xml</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_outsmartfacebook.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_outsmartfacebook.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.mod_outsmartfacebook.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.mod_outsmartfacebook.sys.ini</language>
+    </languages>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_OUTSMARTFACEBOOK" />
+    <config>
+        <fields name="params">
+            <fieldset name="general">
+                <field name="fb_url"
+                type = "url"
+                label="MOD_OUTSMARTFACEBOOK_URL_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_URL_DESC"
+                       default="https://www.facebook.com/facebook">
+                </field>
+                 <field name="fb_showposts"
+                type = "radio"
+                class="btn-group"
+                label="MOD_OUTSMARTFACEBOOK_SHOWPOSTS_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_SHOWPOSTS_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="fb_height"
+                type ="integer"
+                label="MOD_OUTSMARTFACEBOOK_HEIGHT_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_HEIGHT_DESC"
+                default="490"
+                first="70" last="550" step="30"
+                />
+                <field name="fb_width"
+                type ="integer"
+                label="MOD_OUTSMARTFACEBOOK_WIDTH_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_WIDTH_DESC"
+                default="340"
+                first="180" last="500" step="20"
+                />
+                <field name="fb_adapt"
+                type = "radio"
+                class="btn-group"
+                label="MOD_OUTSMARTFACEBOOK_ADAPTWIDTH_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_ADAPTHWIDTH_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="fb_smallheader"
+                type = "radio"
+                class="btn-group"
+                label="MOD_OUTSMARTFACEBOOK_SMALLHEADER_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_SMALLHEADER_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="fb_hidecover"
+                type = "radio"
+                class="btn-group"
+                label="MOD_OUTSMARTFACEBOOK_HIDECOVER_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_HIDECOVER_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="fb_friendsface"
+                type = "radio"
+                class="btn-group"
+                label="MOD_OUTSMARTFACEBOOK_FRIENDSFACE_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_FRIENDSFACE_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="fb_tabs"
+                type = "list"
+                label="MOD_OUTSMARTFACEBOOK_TABS_LABEL"
+                description="MOD_OUTSMARTFACEBOOK_TABS_DESC"
+                       default="timeline"
+                    multiple="true">
+                    <option value="timeline">MOD_OUTSMARTFACEBOOK_TIMELINE</option>
+                    <option value="events">MOD_OUTSMARTFACEBOOK_EVENTS</option>
+                    <option value="messages">MOD_OUTSMARTFACEBOOK_MESSAGES</option>
+                </field>
+            </fieldset>
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="mod_outsmartfacebook">
+            http://www.outsmartit.be/updates/outsmartfacebook.xml
+        </server>
+    </updateservers>
+</extension>
+
+
+
