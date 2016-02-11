@@ -6,8 +6,8 @@
     <copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@outsmartit.be</authorEmail>
-    <authorUrl>www.outsmartit.be</authorUrl>
-    <version>1.0</version>
+    <authorUrl>http://www.outsmartit.be</authorUrl>
+    <version>1.2</version>
     <description>MOD_OUTSMARTFACEBOOK_XML_DESCRIPTION</description>
     <files>
         <filename module="mod_outsmartfacebook">mod_outsmartfacebook.php</filename>
@@ -128,9 +128,7 @@
         </fields>
     </config>
     <updateservers>
-        <server type="extension" priority="1" name="mod_outsmartfacebook">
-            http://www.outsmartit.be/updates/outsmartfacebook.xml
-        </server>
+        <server type="extension" priority="1" name="mod_outsmartfacebook">http://www.outsmartit.be/updates/outsmartfacebook.xml</server>
     </updateservers>
 </extension>
 

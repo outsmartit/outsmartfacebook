@@ -29,8 +29,8 @@ $document->addScript(JURI::base() . 'modules/mod_outsmartfacebook/assets/outsmar
 <?php else : ?>
 <div class="fb-page" 
   data-href="<?php echo $fb_url; ?>"
-  data-width="380" 
-  data-hide-cover="false"
-  data-show-facepile="false" 
+  data-width="<?php echo $fb_width; ?>" 
+  data-hide-cover="<?php echo $conv_hidecover; ?>"
+  data-show-facepile="<?php echo $conv_friends; ?>" 
   data-show-posts="false"></div>
 <?php endif; 
